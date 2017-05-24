@@ -17,7 +17,10 @@ Pconst = ProBotConstantsFile.Constants()
 PWM.start(Pconst.PWM_R_PWM, 0, Pconst.PWM_Freq) #pwm
 #PWM.start(Pconst.PWM_L_DIR, 50, Pconst.PWM_Freq)
 PWM.start(Pconst.PWM_L_PWM, 0, Pconst.PWM_Freq) #pwm
-
+GPIO.setup(Pconst.L_pos, GPIO.OUT)
+GPIO.setup(Pconst.L_neg, GPIO.OUT)
+GPIO.setup(Pconst.R_pos, GPIO.OUT)
+GPIO.setup(PConst.R_neg, GPIO.OUT)
 
 class PWMClass ():
 	
@@ -34,28 +37,43 @@ class PWMClass ():
 	    
 	    if rightMotor>0:
 		#PWM.set_duty_cycle(Pconst.PWM_R_DIR, 100)
+		GPIO.output(Pconst.R_pos, GPIO.HIGH)
+		GPIO.output(Pconst.R_neg, GPIO.LOW)
 		PWM.set_duty_cycle(Pconst.PWM_R_PWM, percentageR)
 	    elif rightMotor<0:
 		#PWM.set_duty_cycle(Pconst.PWM_R_DIR,  0)
+		GPIO.output(Pconst.R_pos, GPIO.LOW)
+		GPIO.output(Pconst.R_neg, GPIO.HIGH)
 		PWM.set_duty_cycle(Pconst.PWM_R_PWM,  percentageR)
 	    elif rightMotor==0:
 		PWM.set_duty_cycle(Pconst.PWM_R_PWM, 0)
-		
+		GPIO.output(Pconst.R_pos, GPIO.LOW)
+		GPIO.output(Pconst.R_neg, GPIO.LOW)
     	    if leftMotor>0:
 	        #PWM.set_duty_cycle(Pconst.PWM_L_DIR, 0)
+		GPIO.output(Pconst.L_pos, GPIO.HIGH)
+		GPIO.output(Pconst.L_neg, GPIO.LOW)
 	        PWM.set_duty_cycle(Pconst.PWM_L_PWM, percentageL)
 	    elif leftMotor<0:
 	    	#PWM.set_duty_cycle(Pconst.PWM_L_DIR, 100)
+		GPIO.output(Pconst.L_pos, GPIO.LOW)
+		GPIO.output(Pconst.L_neg, GPIO.HIGH)
       	    	PWM.set_duty_cycle(Pconst.PWM_L_PWM, percentageL)
     	    elif leftMotor==0:
 	   	PWM.set_duty_cycle(Pconst.PWM_L_PWM, 0)
+		GPIO.output(Pconst.L_pos, GPIO.LOW)
+		GPIO.output(Pconst.L_neg, GPIO.LOW)
 
 			
 	def PWMStop(self):
 	    	PWM.stop(Pconst.PWM_R_PWM)
 		#PWM.stop(Pconst.PWM_R_DIR)
+		GPIO.output(Pconst.R_pos, GPIO.LOW)
+		GPIO.output(Pconst.R_neg, GPIO.LOW)		
 		PWM.stop(Pconst.PWM_L_PWM)
-		#PWM.stop(Pconst.PWM_L_DIR)
+		#PWM.stop(Pconst.PWM_L_DIR)		
+		GPIO.output(Pconst.L_pos, GPIO.LOW)
+		GPIO.output(Pconst.L_neg, GPIO.LOW)
 		PWM.cleanup()
 		
 		
