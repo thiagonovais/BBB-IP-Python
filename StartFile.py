@@ -82,7 +82,7 @@ class StartFileClass():
       Sabertooth.stopAndReset()
       #GPIO.output(Pconst.GreenLED, GPIO.LOW)
       #GPIO.output(Pconst.RedLED, GPIO.LOW)
-     # GPIO.output(Pconst.BlueLED, GPIO.LOW)
+      #GPIO.output(Pconst.BlueLED, GPIO.LOW)
       userChoiceFile = open("userChoice.txt", "wb")
       userChoiceFile.write("0")
       userChoiceFile.close()
