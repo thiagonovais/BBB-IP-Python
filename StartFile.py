@@ -2,7 +2,9 @@
 
 import sys
 import ProBotConstantsFile
+#Need to verify
 import PWMFile
+#Need to verify
 import SabertoothFile
 import Adafruit_BBIO.GPIO as GPIO
 
@@ -11,9 +13,9 @@ PWM = PWMFile.PWMClass()
 Pconst = ProBotConstantsFile.Constants()
 
 # Configuration the type of GPIO's
-GPIO.setup(Pconst.RedLED, GPIO.OUT)
-GPIO.setup(Pconst.GreenLED, GPIO.OUT)
-GPIO.setup(Pconst.BlueLED, GPIO.OUT)
+#GPIO.setup(Pconst.RedLED, GPIO.OUT)
+#GPIO.setup(Pconst.GreenLED, GPIO.OUT)
+#GPIO.setup(Pconst.BlueLED, GPIO.OUT)
 
 
 class StartFileClass():
@@ -78,9 +80,9 @@ class StartFileClass():
     def StopProgram(self):
       PWM.PWMStop()
       Sabertooth.stopAndReset()
-      GPIO.output(Pconst.GreenLED, GPIO.LOW)
-      GPIO.output(Pconst.RedLED, GPIO.LOW)
-      GPIO.output(Pconst.BlueLED, GPIO.LOW)
+      #GPIO.output(Pconst.GreenLED, GPIO.LOW)
+      #GPIO.output(Pconst.RedLED, GPIO.LOW)
+     # GPIO.output(Pconst.BlueLED, GPIO.LOW)
       userChoiceFile = open("userChoice.txt", "wb")
       userChoiceFile.write("0")
       userChoiceFile.close()
