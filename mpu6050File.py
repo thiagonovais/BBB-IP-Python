@@ -18,9 +18,9 @@ InitProgram=StartFile.StartFileClass()
 Pub_SubStart = SocketStartAndStop.SocketClass()
 
 # Configuration the type of GPIO's
-GPIO.setup(Pconst.RedLED, GPIO.OUT)
-GPIO.setup(Pconst.GreenLED, GPIO.OUT)
-GPIO.setup(Pconst.BlueLED, GPIO.OUT)
+#GPIO.setup(Pconst.RedLED, GPIO.OUT)
+#GPIO.setup(Pconst.GreenLED, GPIO.OUT)
+#GPIO.setup(Pconst.BlueLED, GPIO.OUT)
 
 class mpu6050Class():
 	# Power management registers
@@ -84,7 +84,7 @@ class mpu6050Class():
 		import RestartProgramFile
 		RestartProgram = RestartProgramFile.RestartProgramClass()
 
-		print "\nProBot must be at 90 degrees!!!"
+		print "\n RoBot must be at 90 degrees!!!"
 		GPIO.output(Pconst.RedLED, GPIO.LOW)
 		GPIO.output(Pconst.BlueLED, GPIO.HIGH)
 		
