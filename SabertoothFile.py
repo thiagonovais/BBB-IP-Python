@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 # Python Standard Library Imports
+#why?
 import Adafruit_BBIO.UART as UART
 import sys
 import serial
@@ -13,9 +14,9 @@ import Adafruit_BBIO.GPIO as GPIO
 Pconst = ProBotConstantsFile.Constants()
 
 # Configuration the type of GPIO's
-GPIO.setup(Pconst.RedLED, GPIO.OUT)
-GPIO.setup(Pconst.GreenLED, GPIO.OUT)
-GPIO.setup(Pconst.BlueLED, GPIO.OUT)
+#GPIO.setup(Pconst.RedLED, GPIO.OUT)
+#GPIO.setup(Pconst.GreenLED, GPIO.OUT)
+#GPIO.setup(Pconst.BlueLED, GPIO.OUT)
 
 # Start the UART1
 UART.setup("UART1")
