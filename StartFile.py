@@ -4,11 +4,10 @@ import sys
 import ProBotConstantsFile
 #PWMFile verified
 import PWMFile
-#Need to verify
-import SabertoothFile
+
 import Adafruit_BBIO.GPIO as GPIO
 
-Sabertooth = SabertoothFile.SabertoothClass()
+
 PWM = PWMFile.PWMClass()
 Pconst = ProBotConstantsFile.Constants()
 
@@ -55,7 +54,6 @@ class StartFileClass():
 
         if userChoice=='0':
 	  print ('\nChoose the type of control of the ProBots motors:')
-	  print ('\n1 - Sabertooth 2x25A')
 	  print ('2 - Cytron 5-25V')
 	  userChoice=input('\nYour choice is: ')
 	  userChoice=str(userChoice)
