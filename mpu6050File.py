@@ -4,9 +4,12 @@ import smbus
 import math
 import sys
 import time
+#Verify the file ProBotConstatsFile
 import ProBotConstantsFile
 import Adafruit_BBIO.GPIO as GPIO
+#Verify the file StartFile
 import StartFile
+#Verify the SocketStartandStop File
 import SocketStartAndStop
 
 # Initialization of classes from local files
@@ -100,8 +103,8 @@ class mpu6050Class():
 
 		print ("\nBe carefull! The mainRoutine is going START!")                	                	
 
-		GPIO.output(Pconst.BlueLED, GPIO.LOW)
-	    	GPIO.output(Pconst.GreenLED, GPIO.HIGH)
+		#no need of the GPIO to turn LED OFF.... GPIO.output(Pconst.BlueLED, GPIO.LOW)
+	    	#no need of the GPIO to turn LED on..... GPIO.output(Pconst.GreenLED, GPIO.HIGH)
 		
 		return Pitch
 
