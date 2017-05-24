@@ -2,7 +2,7 @@
 
 import sys
 import ProBotConstantsFile
-#Need to verify
+#PWMFile verified
 import PWMFile
 #Need to verify
 import SabertoothFile
