@@ -10,8 +10,12 @@ class Constants:
 	self.PWM_Freq = 20000
 	#self.PWM_L_DIR = "P9_14"
 	self.PWM_L_PWM = "P9_22"
+	self.L_pos = "P8_15"
+	self.L_neg = "P8_16"
 	#self.PWM_R_DIR = "P9_42"
-	self.PWM_R_PWM = "P8_13"
+	self.PWM_R_PWM = "P9_16"
+	self.R_pos = "P8_17"
+	self.R_neg = "P8_18"
         self.ticks = 10000
         self.wheelDiameter = 0.25
         #self.RedLED = "P8_7"
