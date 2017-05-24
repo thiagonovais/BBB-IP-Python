@@ -4,13 +4,12 @@ import smbus
 import math
 import sys
 import time
-#Verify the file ProBotConstatsFile
+#Verified ProBotConstatsFile
 import ProBotConstantsFile
 import Adafruit_BBIO.GPIO as GPIO
 #Verify the file StartFile
 import StartFile
-#Verify the SocketStartandStop File
-import SocketStartAndStop
+
 
 # Initialization of classes from local files
 Pconst = ProBotConstantsFile.Constants()
