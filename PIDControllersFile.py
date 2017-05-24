@@ -19,13 +19,7 @@ class PIDControllersClass():
         self.error = float(reference - measured)
 	
 	# Load the right values for the controllers,  depending on if we are using Sabertooth of PWM controller
-	if userChoice=='1':	
-		KpV=Pconst.SaberTooth_KpV
-		KiV=Pconst.SaberTooth_KiV
-		KdV=Pconst.SaberTooth_KdV
-		KpA=Pconst.SaberTooth_KpA
-		KiA=Pconst.SaberTooth_KiA
-		KdA=Pconst.SaberTooth_KdA
+
 
 	if userChoice=='2':
 		KpV=Pconst.PWM_KpV
