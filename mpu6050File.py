@@ -7,7 +7,7 @@ import time
 #Verified ProBotConstatsFile
 import ProBotConstantsFile
 import Adafruit_BBIO.GPIO as GPIO
-#Verify the file StartFile
+#Verified StartFile
 import StartFile
 
 
