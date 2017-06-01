@@ -4,19 +4,15 @@ import time
 import math
 import Adafruit_BBIO.GPIO as GPIO
 import Adafruit_BBIO.PWM as PWM
-import ProBotConstantsFile
+import ConstantsFile
 
-Pconst = ProBotConstantsFile.Constants()
+Pconst = ConstantsFile.Constants()
 
 # Start the GPIO's
-#GPIO.setup(Pconst.RedLED, GPIO.OUT)
-#GPIO.setup(Pconst.BlueLED, GPIO.OUT)
 
 #PWM.start(channel, duty, freq, polarity)
-#PWM.start(Pconst.PWM_R_DIR, 50, Pconst.PWM_Freq)
-PWM.start(Pconst.PWM_R_PWM, 0, Pconst.PWM_Freq) #pwm
-#PWM.start(Pconst.PWM_L_DIR, 50, Pconst.PWM_Freq)
-PWM.start(Pconst.PWM_L_PWM, 0, Pconst.PWM_Freq) #pwm
+PWM.start(Pconst.PWM_R_PWM, 0, Pconst.PWM_Freq) #pwm starts disabled
+PWM.start(Pconst.PWM_L_PWM, 0, Pconst.PWM_Freq) #pwm starts disabled
 GPIO.setup(Pconst.L_pos, GPIO.OUT)
 GPIO.setup(Pconst.L_neg, GPIO.OUT)
 GPIO.setup(Pconst.R_pos, GPIO.OUT)
