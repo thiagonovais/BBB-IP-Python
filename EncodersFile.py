@@ -2,10 +2,10 @@
 
 # Python Standard Library Imports
 import math
-import ProBotConstantsFile
+import ConstantsFile
 
 # Initialization of classes from local files
-Pconst = ProBotConstantsFile.Constants()
+Pconst = ConstantsFile.Constants()
 
 
 class EncodersClass():
@@ -15,7 +15,8 @@ class EncodersClass():
 
     def EncodersValues(self):
 
-        wheelTicks1 = -Pconst.encoder1.get_position()		# Get position from the first encoder
+      ''' MPU6050 can give a precise speed? 
+       wheelTicks1 = -Pconst.encoder1.get_position()		# Get position from the first encoder
         wheelTicks2 = -Pconst.encoder2.get_position()		# Get position from the second encoder
 				
         wheelPosition1_m = (float(wheelTicks1)) / Pconst.ticks * math.pi * Pconst.wheelDiameter	# First wheel distance travelled 
@@ -25,6 +26,6 @@ class EncodersClass():
 	wheelVelocity2 = float(wheelPosition2_m - self.LastwheelPosition2)   		
 
 	self.LastwheelPosition1 = wheelPosition1_m   
-	self.LastwheelPosition2 = wheelPosition2_m
+	self.LastwheelPosition2 = wheelPosition2_m'''
 
         return [wheelVelocity1, wheelVelocity2]
